@@ -24,4 +24,28 @@ public class StudentServiceImpl extends ServiceImpl<StudentMapper, Student> impl
 		return this.baseMapper.selectById(id);
 	}
 
+	@DS
+	@Override
+	public int saveToDB1(Student entity) {
+		return this.baseMapper.insert(entity);
+	}
+
+	@DS("datasource2")
+	@Override
+	public int saveToDB2(Student entity) {
+		return this.baseMapper.insert(entity);
+	}
+
+	@DS
+	@Override
+	public Student getInfoFromDB1(int id) {
+		return this.baseMapper.selectById(id);
+	}
+
+	@DS("datasource2")
+	@Override
+	public Student getInfoFromDB2(int id) {
+		return this.baseMapper.selectById(id);
+	}
+
 }

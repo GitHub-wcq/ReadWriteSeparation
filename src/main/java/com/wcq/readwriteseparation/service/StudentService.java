@@ -15,4 +15,12 @@ public interface StudentService extends IService<Student> {
 	
 	Student getById(int id);
 
+	int saveToDB1(Student entity);
+	
+	int saveToDB2(Student entity);
+
+	Student getInfoFromDB1(int id);
+
+	Student getInfoFromDB2(int id);
+
 }
